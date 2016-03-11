@@ -1,15 +1,60 @@
+body{
+  background-color: #EEE2E4;
+  padding-top: 5%;
+}
+input{
+  border-style:solid;
+  border-radius: 5px;
+  border-color: #E03F61;
+  padding-left:5px;
+  background-color: inherit;
+  width:100%;
+}
+input:focus{
+  outline:none;
+}
+
+.search{
+  margin-bottom:5px;
+  border-style:solid;
+  border-width:1px;
+  border-color:black;
+}
 #searchQuery{
 
 }
 #search_results{
-
+  padding-top:20px;
 }
 .search_entry{
-
+  background-color:#2E2E31;
+  margin-bottom:5px;
+  border-radius:5px;
+  color:white;
+}
+.search_entry:hover{
+  background-color:white;
+  color: #2E2E31;
 }
 .search_title{
-
+  font-size:20px;
+  font-weight:bold;
 }
 .search_body{
 
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
 }
