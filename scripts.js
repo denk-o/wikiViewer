@@ -10,13 +10,17 @@ function displayResults(data, results){
       body=data[2][i];
       link=data[3][i];
       var item = title +"\n"+body+"\n"+link+"\n";
-      $("#search_results").append("<div class='row'><div class='col-md-12'>"+
-        item+"</div></div>");
+      $("#search_results").append("<div class='row'><a href='"+link+
+        "' target='_blank'><div class='col-md-12 search_entry'>"+"<div class='search_title'>"+title+
+        "</div><div class='search_body'>"+body+"</div></div></a></div>");
       console.log(title +"\n"+body+"\n"+link+"\n");
   }
 }
 
 function searchWiki(){
+  if($("#searchQuery").val().trim().length==0){
+    return;
+  }
   var action = "action=opensearch";
   var list = "list=search";
   var results=10;
@@ -28,6 +32,7 @@ function searchWiki(){
     dataType: "jsonp",
     success: function(data){
       console.log(data);
+      $("#search_results").empty();
       displayResults(data, 10);
     }
   });
